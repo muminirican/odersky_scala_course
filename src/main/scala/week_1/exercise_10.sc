@@ -2,6 +2,11 @@ abstract class IntSet{
   def incl(x: Int): IntSet
   def contains(x: Int): Boolean
   def union(other: IntSet): IntSet
+  //below, S is a type which is upper bounded by IntSet, means can be, Empty, Non Empty, Nothing..
+  //def assertAllPos[S <: IntSet](r: S): S
+
+  // similarly , we could have lower bounds, means can be, Non Empty, IntSet, AnyRef or Any
+  // [S >: Empty]
 }
 
 object Empty extends IntSet{
